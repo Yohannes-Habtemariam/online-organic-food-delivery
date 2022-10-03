@@ -1,0 +1,209 @@
+@import '../../scss-styling/styleVariables.scss';
+
+.cart-page-container {
+    width: 90%;
+    margin: auto;
+}
+
+.cart-after-placing-order-container {
+    padding: 0.3rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3px;
+    // background-color: #f0ffff;
+
+    .heading {
+        color: $mainCol;
+        font-size: 1.6rem;
+    }
+
+    .cart-length-container {
+        margin: 2rem 0;
+    }
+}
+
+.meals-choice {
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+}
+
+.ordered-meals-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+
+    .image-container {
+        width: 95%;
+        margin: auto;
+
+        & img {
+            margin-left: 1.4rem;
+            border-radius: 2%;
+        }
+    }
+
+    .meal-name {
+        width: 85%;
+        margin: 1rem auto;
+    }
+
+    .add-reduce-quantity-container {
+        width: 85%;
+        margin: auto;
+        box-shadow: 0 0 1px;
+        border-radius: 0.3rem;
+        padding: 1rem;
+    }
+
+    & form {
+
+        // border: 1px solid $mainCol;
+        & label {
+            color: $mainCol;
+        }
+
+        & input {
+            @include standardInput;
+        }
+    }
+}
+
+.add-reduce-quantity-container {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0.2rem;
+
+    .value-input-container input {
+        width: 50%;
+        padding: 0.16rem 0.5rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .quantity-button button {
+        min-width: 90%;
+        font-size: 1.4rem;
+        padding: 0.16rem 0.5rem;
+        border-radius: 0.3rem;
+        font-weight: 700;
+        text-align: center;
+        background-color: $mainCol;
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $mainColLighter;
+            transition: 0.5s;
+        }
+    }
+
+    .meal-price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    .deleteOrderedMeal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 4rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.total {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.delivery-address {
+    margin: 2rem 0;
+
+    .check-box-container {
+        margin-top: 0.5rem;
+        background-color: $mainColLighter;
+
+
+        .same-delivery-address-paragraph {
+            font-size: 1.3rem;
+        }
+
+        .check-box input {
+            width: 70px;
+            height: 50px;
+            cursor: pointer;
+            border: 3ox solid black;
+        }
+    }
+}
+
+.check-box-and-paragraph-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.new-delivery-address-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    width: 70%;
+    padding: 1rem;
+
+    .label-and-input {
+        display: grid;
+        grid-template-columns: 9rem 1fr;
+        column-gap: 1rem;
+
+        & div input {
+            padding: 0.3rem;
+            width: 100%;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .label {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.new-address-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ordered-meal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+
+}
+
+button {
+    font-size: 1.4rem;
+    padding: 0.16rem 0.5rem;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: $mainCol;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+        background-color: greenyellow;
+        transition: 0.5s;
+    }
+}

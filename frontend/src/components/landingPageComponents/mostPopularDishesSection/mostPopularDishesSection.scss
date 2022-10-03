@@ -1,0 +1,68 @@
+@import "../../../scss-styling/styleVariables.scss";
+
+.mostPopularDishesSection {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  align-items: center;
+
+  .pageTitle {
+    @include sectionTitle;
+    padding: 10px;
+
+    @media (max-width: 700px) {
+      font-size: 44px;
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+
+}
+// this is the card with border
+.popularMeals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 0 2px;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  width: 20%;
+  padding:20px;
+}
+
+.mealName{
+  @include paragraphStyle;
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.price{
+  @include paragraphAccentStyle;
+  margin: 20px;
+}
+
+.mealDescription{
+  @include paragraphStyle;
+  text-align: left;
+  width:80%; 
+}
+
+.mealPageText{
+@include paragraphStyle;
+}
+
+
+.addToCart{
+  @include buttonOutline;
+margin-bottom: 20px;
+}
+
+.imgPopular{
+  height: 200px;
+}
+}
